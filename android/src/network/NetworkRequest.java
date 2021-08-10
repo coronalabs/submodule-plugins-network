@@ -1507,7 +1507,7 @@ public class NetworkRequest implements com.naef.jnlua.NamedJavaFunction
 							System.out.println("WARNING: " + String.format("redirecting from HTTPS to HTTP (%s -> %s)", origURL, locHeader));
 						}
 
-						URL url = new URL(locHeader);
+						URL url = new URL(urlConnection.getURL(), locHeader);
 
 						debug("Handling %d redirect to: %s", responseCode, locHeader);
 
