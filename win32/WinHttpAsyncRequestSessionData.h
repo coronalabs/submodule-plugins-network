@@ -1,6 +1,7 @@
 //////////////////////////////////////////////////////////////////////////////
 //
-// This file is part of the Corona game engine.
+// This file is part of the Solar2D game engine.
+// With contributions from Dianchu Technology
 // For overview and more information on licensing please refer to README.md 
 // Home page: https://github.com/coronalabs/corona
 // Contact: support@coronalabs.com
@@ -15,8 +16,8 @@
 
 #include "WindowsNetworkSupport.h"
 
-#define SESSION_TX_BUFFER_SIZE 8192
-#define SESSION_RX_BUFFER_SIZE 8192 // As recommended by Microsoft's WinHttp documentation
+#define SESSION_TX_BUFFER_SIZE 262144
+#define SESSION_RX_BUFFER_SIZE 262144 // Orignal 8192 was recommended by Microsoft's WinHttp documentation, has 4.4Mbps download speed at maximum.
 
 /// Stores information needed by a threaded HTTP request.
 /// Provides fields to be monitored by the main thread to control the async operation.
